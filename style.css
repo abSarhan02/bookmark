@@ -1,0 +1,120 @@
+/* *RESET */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/**RESET */
+
+/**ROOT */
+:root{
+    --ice:#80b7f6;
+    --hover-ice:#76aeee;
+    --green:#93dc5a;
+    --hover-green:#7cbb4c;
+    --yellow:#FEC260;
+    --dark-txt:#212529;
+    --fresh-red:#e84e60;
+    --hover-red:#c13f4e;
+}
+/**ROOT */
+
+/**FONT */
+.font-pacifico{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size: 3.125rem;
+  }
+/**FONT */
+
+/**BODY */
+body{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+                            min-height:100vh;
+    color: var(--dark-txt);
+}
+/**BODY */
+
+/**BUTTONS */
+.submit{
+    background-color: var(--ice);
+    border-color: var(--ice);
+}
+.submit:hover{
+    background-color: var(--hover-ice);
+    border-color: white;
+}
+
+.btn-success{
+    background-color: var(--green);
+    border-color: var(--green);
+} 
+.btn-success:hover{
+    border-color: white;
+    background-color: var(--hover-green);
+}
+.btn-danger{
+    background-color: var(--fresh-red);
+} 
+.btn-danger:hover{
+    border-color: white;
+    background-color: var(--hover-red);
+
+}
+/**BUTTONS */
+
+.form-control:focus {
+    border-color: var(--ice);
+    box-shadow: inset 1px 1px 1px var(--ice);
+  }
+
+/**TEXT */
+h3{
+    color: var(--hover-ice);
+}
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0.125rem;
+  background-color: var(--ice);
+  transition: 0.35s;
+  z-index: -1;
+}
+h1:hover::before {
+  height: 65%;
+}
+i{
+    transition: 1s;
+    overflow: hidden;
+}
+h3 i::after{
+content: "";
+position: absolute;
+width: 100%;
+left: 0px;
+height: 0%;
+background-color: var(--hover-ice);
+transition: 0.35s;
+}
+h3:hover i:after{
+    height: 50%;
+}
+/**TEXT */
+
+/**MEDIA QUERY FOR MOBILE*/
+@media only screen and (max-width: 767px) {
+   .btn{
+    font-size: 0.75rem;
+   }
+   h3{
+    font-size: 1rem;
+   }
+   label{
+    font-size:0.8rem ;
+   }
+}
